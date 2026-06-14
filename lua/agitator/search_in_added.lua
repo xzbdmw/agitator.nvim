@@ -28,7 +28,7 @@ local function search_in_added_add_untracked(lines_with_numbers, opts)
 		on_exit = vim.schedule_wrap(function(j, output)
 			pickers
 				.new(opts, {
-					prompt_title = vim.g.Base_commit_msg ~= "" and vim.g.Base_commit_msg or "Git Diff",
+					prompt_title = "Git Diff",
 					finder = finders.new_table({
 						results = lines_with_numbers,
 						entry_maker = opts.entry_maker or make_entry.gen_from_vimgrep(opts),
